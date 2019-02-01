@@ -78,6 +78,11 @@ services:
 
   # What to call the service hosting MySQL. This name also acts as the
   # hostname to access the service by from the php service.
+  phpmyadmin:
+
+    expose: 80
+    image: phpmyadmin/phpmyadmin 
+
   mysql:
 
     # Use the latest available 5.x version of MySQL
@@ -98,7 +103,3 @@ services:
         #- scp user@example.com:database.sql.gz /tmp/database.sql.gz
         #- zcat /tmp/database.sql.gz | mysql tugboat
         #- rm /tmp/database.sql.gz
-    phpmyadmin:
-      
-      expose: 80
-      image: phpmyadmin/phpmyadmin
