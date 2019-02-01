@@ -26,7 +26,7 @@ services:
 
         # Link the document root to the expected path. This example links
         # /docroot to the docroot
-        - ln -snf "${TUGBOAT_ROOT}=" "${DOCROOT}"
+        - ln -snf "${TUGBOAT_ROOT}/docroot" "${DOCROOT}"
 
         # Use the tugboat-specific Drupal settings
         - cp "${TUGBOAT_ROOT}/.tugboat/settings.local.php"
