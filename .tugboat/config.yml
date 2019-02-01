@@ -47,7 +47,7 @@ services:
         - echo "\$settings['hash_salt'] = '$(openssl rand -hex 32)';" >> "${DOCROOT}/sites/default/settings.local.php"
 
         # Install/update packages managed by composer, including drush
-        - composer install --no-ansi
+        #- composer install --no-ansi
 
         # Copy the files directory from an external server. The public
         # SSH key found in the Tugboat Repository configuration must be
